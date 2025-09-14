@@ -1,32 +1,38 @@
-# Arbitrary File Write Vulnerability in Wishlist Member Plugin
-
 ## 📄 Overview
 
-This repository contains a detailed analysis of an **Arbitrary File Write** vulnerability discovered in the **Wishlist Member** plugin. The vulnerability exists in the user registration interface and allows an attacker to write arbitrary files to the server by manipulating two specific POST parameters.
+This repository contains a detailed analysis of an **Arbitrary File Write** vulnerability discovered in the **Wishlist Member** plugin for WordPress.
 
-Although this report is for educational and responsible disclosure purposes, sensitive details have been omitted to prevent exploitation.
+- **Affected Versions**: Version `3.25.1` and all earlier versions (i.e., `<= 3.25.1`)
+- **Severity**: High – this issue could lead to **Remote Code Execution (RCE)** if exploited.
+
+The vulnerability exists in the user registration endpoint and allows an attacker to write arbitrary files to the server by manipulating specific POST parameters.
+
+This report is intended for educational and responsible disclosure purposes. Sensitive information has been redacted to prevent misuse.
 
 ---
 
 ## ⚙ Vulnerability Details
 
-- **Type**: Arbitrary File Write  
-- **Affected Component**: User registration endpoint in Wishlist Member plugin  
-- **Impact**: High – may lead to Remote Code Execution (RCE) if the file is moved to the web root and executed.
+By sending a crafted `POST` request with parameters `transient_hash` and `orig_email`, an attacker can control both the file path and its contents.  
 
-### How it works
+- **Potential Impact / RCE Risk**:  
+  If the attacker is able to place the file in a web-accessible directory (such as the site root) and execute it, this could lead to **full Remote Code Execution (RCE)**, allowing the attacker to run arbitrary commands on the server.  
 
-By sending a crafted `POST` request with two parameters – `transient_hash` and `orig_email` – an attacker can specify both the location and content of a file. This can allow arbitrary code injection if the server is misconfigured or the file is executed.
+The issue has been confirmed on **Wishlist Member version 3.25.1**, and it is likely that earlier versions are also affected.
 
-![null](file.jpg)
+---
 
-![null](file1.jpg)
+## 📸 Screenshots
+
+(file.jpg)
+
+(file1.jpg)
+
+> Note: Sensitive paths and server-specific data have been redacted.
 
 ---
 
 ## 🧰 Proof of Concept (POC)
-
-> ⚠ Sensitive paths and payloads have been redacted for security reasons.
 
 ```http
 POST /path/to/register HTTP/1.1
