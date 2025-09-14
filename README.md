@@ -1,6 +1,6 @@
 ## 📄 Overview
 
-This repository contains a detailed analysis of an **Arbitrary File Write** vulnerability discovered in the **Wishlist Member** plugin for WordPress.
+This repository contains a detailed analysis of an **Unauthenticated Arbitrary File Write** vulnerability discovered in the **Wishlist Member** plugin for WordPress.
 
 - **Affected Versions**: Version `3.25.1` and all earlier versions (i.e., `<= 3.25.1`)
 - **Severity**: High – this issue could lead to **Remote Code Execution (RCE)** if exploited.
@@ -24,9 +24,9 @@ The issue has been confirmed on **Wishlist Member version 3.25.1**, and it is li
 
 ## 📸 Screenshots
 
-(file.jpg)
+![Screenshot](file.jpg)
 
-(file1.jpg)
+![Screenshot](file1.jpg)
 
 > Note: Sensitive paths and server-specific data have been redacted.
 
