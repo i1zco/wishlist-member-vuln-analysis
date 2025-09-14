@@ -18,9 +18,9 @@ Although this report is for educational and responsible disclosure purposes, sen
 
 By sending a crafted `POST` request with two parameters – `transient_hash` and `orig_email` – an attacker can specify both the location and content of a file. This can allow arbitrary code injection if the server is misconfigured or the file is executed.
 
-[file.jpg]
+(file.jpg)
 
-[file1.jpg]
+(file1.jpg)
 
 ---
 
