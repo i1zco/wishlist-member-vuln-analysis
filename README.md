@@ -24,9 +24,9 @@ The issue has been confirmed on **Wishlist Member version 3.25.1**, and it is li
 
 ## 📸 Screenshots
 
-![Screenshot](file.jpg)
+![Screenshot](wishlist.png)
 
-![Screenshot](file1.jpg)
+![Screenshot](wishlist2.png)
 
 > Note: Sensitive paths and server-specific data have been redacted.
 
