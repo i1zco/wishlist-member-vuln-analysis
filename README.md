@@ -37,7 +37,7 @@ This issue was confirmed in **Wishlist Member version 3.25.1**, and earlier vers
 ## 🧰 Proof of Concept (POC)
 
 ```http
-POST /path/to/register HTTP/1.1
+POST /wishlist/register HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
 
