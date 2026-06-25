@@ -1,4 +1,4 @@
-## 📄 Overview
+## Overview
 
 This repository contains a detailed analysis of a vulnerability called **Unauthorized Arbitrary File Writing & Path Traversel** discovered in the **Wishlist Member** WordPress plugin. This vulnerability has already been patched without a CVE ID.
 
@@ -12,7 +12,7 @@ This report is intended for educational and responsible disclosure purposes. Sen
 
 ---
 
-## ⚙ Vulnerability Details
+## Vulnerability Details
 
 By sending a specially crafted `POST` request with the `transient_hash` operator to the `Path Traversel` of a temporary directory or the site root, and `orig_email`, code is placed that could cause code execution. An attacker could then control the file's path and contents.
 
@@ -24,7 +24,7 @@ This issue was confirmed in **Wishlist Member version 3.25.1**, and earlier vers
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ![Screenshot](wishlist.png)
 
@@ -34,7 +34,7 @@ This issue was confirmed in **Wishlist Member version 3.25.1**, and earlier vers
 
 --
 
-## 🧰 Proof of Concept (POC)
+## Proof of Concept (POC)
 
 ```http
 POST /wishlist/register HTTP/1.1
